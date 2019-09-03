@@ -24,5 +24,10 @@ docker service create --name=srvInfluxdb \
 	--network=mqttnetwork \
 	influxdb
 
-
+docker volume create logsavedataconfig
+docker service create --name logsavedataconfiglistener \
+	--mount type=volume,source=logsavedataconfig,destination=/etc/logsavedata,volume-label="color=red",volume-label="shape=round" \
+	--network mqttnetwork \
+	--detach=true \
+	domminatrix/logsavedataconfiglistener:latest 
 
