@@ -1,0 +1,10 @@
+language: minimal
+
+services:
+  - docker
+
+script:
+  - dockerscript/build.sh
+  - dockerscript/run.sh
+  - dockerscript/run.test.sh
+  - sleep 2
