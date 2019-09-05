@@ -31,7 +31,7 @@ docker service create --name logsavedataconfiglistener \
 	--detach=true \
 	domminatrix/logsavedataconfiglistener:latest 
 
-docker service create logsavedatarunrecorder \
+docker service create --name logsavedatarunrecorder \
 	--network mqttnetwork \
 	--detach=true \
 	domminatrix/logsavedatarunrecorder:latest
