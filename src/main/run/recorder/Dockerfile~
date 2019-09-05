@@ -1,0 +1,3 @@
+FROM microsoft/dotnet/core/sdk:2.2 as build
+FROM microsoft/dotnet/core/runtime:2.2 as run
+
