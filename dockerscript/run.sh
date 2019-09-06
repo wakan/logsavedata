@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-docker network create --driver=overlay mqttnetwork
+docker network create --driver=overlay --attachable mqttnetwork
 docker volume create mosquitto_data
 docker volume create mosquitto_log
 docker service create  --name=srvMosquitto \
